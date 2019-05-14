@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
 import * as FablesAPI from '../utils/api'
+import Fable from './Fable'
 
 class App extends Component {
 
   state = {
-    fable : {}
+    fable : {},
+    loading: true,
   }
 
   componentDidMount() {
     FablesAPI.getFable('le_loup_et_le_chien')
     .then((fable) => {
-      this.setState({fable})
+      this.setState({fable, loading:false})
     })
   }
 
   render () {
-    const {fable} = this.state
+    const {id, title, texte} = this.state.fable
 
-    return (
-      <div>
-        <div className="fable">
-          {JSON.stringify(fable, null, 3)}
-        </div>
-      </div>
+    const jsx = this.state.loading 
+      ?<p>Loading...</p>
+      :<Fable title={title} texte={texte}/>
 
-    )
+    return jsx
+
   }
 }
 

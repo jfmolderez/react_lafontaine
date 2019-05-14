@@ -20,6 +20,7 @@ export const getFable = (fableId) => {
         _getTexte(fableId),
         _getFable(fableId)
     ]).then(([texte, fable]) => (
-        {...fable, texte}
+        {...fable, texte: texte.split("\n")}
     ))
 }
+
