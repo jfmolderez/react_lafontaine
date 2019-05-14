@@ -1,6 +1,12 @@
-const fables = require('./fables.json')
+const fables = require('./fables.json');
+const textes = require('./textes.json');
 
-// source : LaFontaine/fables_1_12.json
+/* 
+source : voir ../LaFontaine
+Pour produire les deux fichiers fables.json et textes.js, éxécuter :
+$ node read_fables.js 
+*/
+ /*
 const textes = {
     la_cigale_et_la_fourmi: 
         "La cigale ayant chanté\nTout l'été,\nSe trouva fort dépourvue\nQuand la bise fut venue.\nPas un seul petit morceau\nDe mouche ou de vermisseau.\nElle alla crier famine\nChez la Fourmi sa voisine,\nLa priant de lui prêter\nQuelque grain pour subsister\nJusqu'à la saison nouvelle.\nJe vous paierai, lui dit-elle,\nAvant l’août, foi d'animal,\nIntérêt et principal.\nLa Fourmi n'est pas prêteuse,\nC'est là son moindre défaut.\nQue faisiez-vous au temps chaud ?\nDit-elle à cette emprunteuse.\nNuit et jour à tout venant,\nJe chantais, ne vous déplaise.\nVous chantiez ? j'en suis fort aise,\nEh bien! dansez maintenant."
@@ -14,6 +20,7 @@ const textes = {
     le_loup_et_le_chien: "Un Loup n’avait que les os et la peau,\nTant les Chiens faisaient bonne garde.\nCe Loup rencontre un Dogue aussi puissant que beau ;\nGras, poli, qui s’était fourvoyé par mégarde.\nL’attaquer, le mettre en quartiers,\nSire Loup l’eût fait volontiers.\nMais il fallait livrer bataille ;\nEt le Mâtin était de taille\nA se défendre hardiment.\nLe Loup donc l’aborde humblement,\nEntre en propos, et lui fait compliment\nSur son embonpoint qu’il admire :\nIl ne tiendra qu’à vous, beau Sire,\nD’être aussi gras que moi, lui repartit le Chien.\nQuittez les bois, vous ferez bien :\nVos pareils y sont misérables,\nCancres, hères, et pauvres diables,\nDont la condition est de mourir de faim.\nCar quoi ? Rien d’assuré ; point de franche lippée ;\nTout à la pointe de l’épée.\nSuivez-moi ; vous aurez bien un meilleur destin.\nLe Loup reprit : Que me faudra-t-il faire ?\nPresque rien, dit le Chien, donner la chasse aux gens\nPortants bâtons, et mendiants ;\nFlatter ceux du logis ; à son Maître complaire ;\nMoyennant quoi votre salaire\nSera force reliefs de toutes les façons ;\nOs de poulets, os de pigeons :\nSans parler de mainte caresse.\nLe Loup déjà se forge une félicité\nQui le fait pleurer de tendresse.\nChemin faisant il vit le col du Chien pelé.\nQu’est-ce là, lui dit-il ? Rien. Quoi rien ? Peu de chose.\nMais encor ? Le collier dont je suis attaché\nDe ce que vous voyez est peut-être la cause.\nAttaché ? dit le Loup, vous ne courez donc pas\nOù vous voulez ? Pas toujours ; mais qu’importe ?\nIl importe si bien, que de tous vos repas\nJe ne veux en aucune sorte ;\nEt ne voudrais pas même à ce prix un trésor.\nCela dit, Maître Loup s’enfuit, et court encore."
     ,
 }
+*/
 
 export function _getTextes() {
     return new Promise((res, rej) => {
@@ -21,6 +28,25 @@ export function _getTextes() {
     })
 }
 
+export function _getFables() {
+    return new Promise((res, rej) => {
+        setTimeout(() => res({...fables}), 1000)
+    })    
+}
+
+export function _getTexte(fableId) {
+    return new Promise((res, rej) => {
+        setTimeout(() => res(textes[fableId], 1000))
+    })
+}
+
+export function _getFable(fableId) {
+    return new Promise((res, rej) => {
+        setTimeout(() => res(fables[fableId], 1000))
+    })
+}
+
+/*
 export function _getFables() {
     const selected = Object.keys(textes)
     const initialValue = {}
@@ -37,5 +63,8 @@ export function _getFables() {
         setTimeout(() => res({...selectedFables}), 1000)
     })
 }
+*/
+
+
 
  
