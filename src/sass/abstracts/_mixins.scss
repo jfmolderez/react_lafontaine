@@ -1,0 +1,9 @@
+@mixin clearfix {
+    // append a psudo element after the element 
+    // which will then clear the floats
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

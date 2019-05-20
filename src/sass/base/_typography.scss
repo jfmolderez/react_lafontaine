@@ -1,0 +1,30 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+    background-color: $color-primary;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.fable {
+    &__header {
+       position: relative; 
+
+       &--img {
+           position: absolute;
+           top: 3rem;
+           left: 3rem;
+           width: 30%;
+           height: auto;
+       }
+    }
+    &__texte {
+        ul {
+            list-style-type:none;
+        }
+    }
+
+}
