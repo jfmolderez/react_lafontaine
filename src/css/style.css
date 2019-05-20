@@ -22,17 +22,48 @@ body {
   font-size: 1.6rem;
   text-align: center; }
 
-.fable__header {
-  position: relative; }
-  .fable__header--img {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    width: 30%;
-    height: auto; }
-
 .fable__texte ul {
   list-style-type: none; }
+
+.heading-primary {
+  color: #777;
+  text-transform: uppercase;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.3rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    padding-right: 0.8rem;
+    animation: moveInRight 1s ease-out; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 .row {
   max-width: 114rem;
@@ -59,3 +90,33 @@ body {
     width: calc(2 * ((100% - 3 * 2rem) / 4) + 2rem); }
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); }
+
+.header {
+  height: 35vh;
+  /* 95 % of viewport height */
+  position: relative; }
+  .header__left {
+    position: absolute;
+    top: 2.4rem;
+    left: 8%; }
+  .header__right {
+    position: absolute;
+    top: 1.5rem;
+    left: 70%; }
+    .header__right--img {
+      width: 50%; }
+  .header__text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.fable__header {
+  position: relative; }
+  .fable__header--img {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 30%;
+    height: auto; }

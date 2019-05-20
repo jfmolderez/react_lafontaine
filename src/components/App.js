@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as FablesAPI from '../utils/api'
 import Fable from './Fable'
+import Header from './Header'
 import '../css/style.css'
 
 class App extends Component {
@@ -18,7 +19,8 @@ class App extends Component {
 
     if (!this.state.loading) {
       const {id, title, texte, img} = this.state.fable
-      return <Fable title={title} texte={texte} alt={id} images={img}/>
+      //return <Fable title={title} texte={texte} alt={id} images={img}/>
+      return <Header />
     }
     return <p> Loading... </p>
   }

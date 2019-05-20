@@ -1,0 +1,29 @@
+.header {
+    height: 35vh;  /* 95 % of viewport height */
+    position: relative;
+
+    &__left {
+        position: absolute;
+        top: 2.4rem;
+        left: 8%;
+    }
+
+    &__right {
+        position: absolute;
+        top: 1.5rem;
+        left: 70%;
+
+        &--img {
+            width:50%;
+        }
+
+    }
+
+    &__text {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
