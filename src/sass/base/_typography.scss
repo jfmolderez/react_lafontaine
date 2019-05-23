@@ -4,7 +4,6 @@ body {
     line-height: 1.7;
     color: $color-grey-dark;
     padding: 3rem;
-    background-color: $color-primary;
     font-size: 1.6rem;
     text-align: center;
 }
@@ -20,7 +19,6 @@ body {
 }
 
 .heading-primary {
-    color: $color-grey-dark;
     text-transform: uppercase;
     margin-bottom: 6rem;
 
@@ -45,5 +43,7 @@ body {
         animation: moveInRight 1s ease-out;
     }
 }
+
+
 
 

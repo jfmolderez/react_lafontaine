@@ -18,6 +18,14 @@ const header = () => {
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/001_Frontispice_Fables_choisies_La_Fontaine_Tome_1_Oudry-Cochin_fils.png"
                 alt={"Frontispice des fables"} className="header__right--img"/>
             </div>
+            {/*
+            <form action="#" className="search">
+                <input type="text" className="search__input" placeholder="Titre de fables"/>
+                <button className="search__button">
+                    <SVG class="search__icon" src="img/SVG/magnifying-glass.svg"/>
+                </button>
+            </form>
+            */}
         </div>
     )
 }

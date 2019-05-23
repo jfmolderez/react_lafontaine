@@ -24,3 +24,11 @@ export const getFable = (fableId) => {
     ))
 }
 
+export const getTitles = () => {
+    return _getFables()
+        .then((fables) => {
+            const titles = Object.keys(fables).map((id) => fables[id].title)
+            return titles
+        })
+}
+

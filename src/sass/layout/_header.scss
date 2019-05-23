@@ -1,6 +1,9 @@
 .header {
-    height: 35vh;  /* 95 % of viewport height */
+    height: 35vh;  /* 35 % of viewport height */
+    background-color: $color-primary;
     position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 28vh, 0 100%);
 
     &__left {
         position: absolute;
@@ -14,7 +17,7 @@
         left: 70%;
 
         &--img {
-            width:50%;
+            width:60%;
         }
 
     }
