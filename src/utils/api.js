@@ -27,7 +27,10 @@ export const getFable = (fableId) => {
 export const getTitles = () => {
     return _getFables()
         .then((fables) => {
-            const titles = Object.keys(fables).map((id) => fables[id].title)
+            const titles = {}
+            Object.values(fables).forEach((fable) => {
+                titles[fable.id] = fable.title
+            })
             return titles
         })
 }

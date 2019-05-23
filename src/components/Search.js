@@ -13,7 +13,7 @@ const search = (props) => {
                     <button onClick={props.search}>Recherche</button>
                 </div>
                 <div className="row searchResults">
-                    {props.results.map((result)=> {
+                    {Object.values(props.results).map((result)=> {
                         return <p key={result} className="searchResult">{result}</p>
                     })}
                 </div>

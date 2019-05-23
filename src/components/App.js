@@ -5,13 +5,18 @@ import Header from './Header'
 import Search from './Search'
 import '../css/style.css'
 
+Object.filter = (obj, predicate) =>
+  Object.keys(obj)
+    .filter( key => predicate(obj[key]) )
+    .reduce( (res, key) => Object.assign(res, { [key] : obj[key] }), {} ) 
+
 class App extends Component {
 
   state = {
     loading:true,
     searchRequest: '',
     searchResults: [],
-    titles: [],
+    titles: {},
     fable: {},     
   }
 
@@ -34,7 +39,11 @@ class App extends Component {
   }
 
   searchTitles = () => { // Todo !!!!
-    this.setState({searchResults:[this.state.titles[0], this.state.titles[10]]})
+    const request = this.state.searchRequest.toLowerCase()
+    console.log("Request : ", request)
+    console.log(this.state.titles)
+    const searchResults = Object.filter(this.state.titles, title => title.toLowerCase().includes(request))
+    this.setState({searchResults})
   }
 
   render () {
